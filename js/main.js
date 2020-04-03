@@ -1,5 +1,5 @@
 function fetchWeatherData(location) {
-  return fetch(`http://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=88956fb3e44bb4b9e7134bfe48cc605e`)
+  return fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=88956fb3e44bb4b9e7134bfe48cc605e`)
     .then((response) => response.json())
     .then((response) => {
       return response;
@@ -40,7 +40,7 @@ function getCity(data) {
 
 function getIconUrl(data) {
   const iconID = data.weather[0].icon;
-  return `http://openweathermap.org/img/wn/${iconID}@2x.png`
+  return `https://openweathermap.org/img/wn/${iconID}@2x.png`
 }
 
 function processWeatherData(data) {
